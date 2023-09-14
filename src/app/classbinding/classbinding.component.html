@@ -1,0 +1,39 @@
+<!-- <div class="container">
+    <h2>Class Binding</h2>
+    <ul class="list-unstyled">
+        <li><input type="checkbox" ngModel #border="ngModel" type="checkbox"></li>
+        <li><input type="checkbox" ngModel #background="ngModel" type="checkbox"></li>
+
+        <li><input type="checkbox" ngModel #text="ngModel" type="checkbox"></li>
+
+    </ul>
+    <h1 [ngClass]="'bg-style'">Microservices</h1>
+    <h1 [ngClass]="['text-style','bg-style']">Spring Boot</h1>
+    <h1 [ngClass]="'bg-style'">Srikanth Rallabandi</h1>
+    
+
+    <h3 [ngClass]="'bg-tex'">Json DAta</h3>
+
+</div> -->
+<div class="container-fluid" [ngClass]="{'dark-theam':darkTheme.value}">
+    <h2>Class Binding</h2>
+    <ul class="list-unstyled">
+        <li><input ngModel #border="ngModel" type="checkbox">Border</li>
+        <li><input ngModel #background="ngModel" type="checkbox">Back ground</li>
+        <li><input ngModel #text="ngModel" type="checkbox">Text</li>
+    </ul>
+    <h1 [ngClass]="'bg-style'">Srikanth Rallabandi</h1>
+    <h1 [ngClass]="['bg-style','text-style','border-style']">Srikanth Rallabandi</h1>
+    <h1 [ngClass]="{'bg-style':background.value,'text-style':text.value,'border-style':border.value}">
+        Srikanth Rallabandi</h1>
+</div>
+
+<div class="container-fluid d-flex justify-content-center align-items-center" style="height: 400px;">
+    <div>
+        <div class="form-switch">
+            <input type="checkbox" ngModel #darkTheme="ngModel" name="" id="" class="form-input-checkbox"> 
+            <label for="" class="form-check-label">Dark Theme</label>
+        </div>
+    </div>
+</div>
+
